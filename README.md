@@ -7,9 +7,9 @@ Foi desenvolvido com base nos ensinamentos de Rafaella Ballerini (https://github
 
 Na versão anterior o botão para direcionar o usuário final estava com uma cor aplicada, foi solucionando inserindo um novo estilo em CSS anulando o Text-decoration da class do button.
 
-# Migração de repositório
+# Migração de repositório v2
 
-Repositório migrado para o dansouzaeu.github.io
+Repositório migrado para o danielsouza-data.github.io
 
 Esse repositório contém informações de contatos pessoais e poderá ser clonado para utilização própria.
 
