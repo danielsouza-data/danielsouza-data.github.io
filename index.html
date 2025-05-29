@@ -1,86 +1,112 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Essa é minha página de apresentação e portifólio desenvolvida em HTML"
-    />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <title>@danielsouza-data - Apresentação em HTML</title>
-  </head>
+<html lang="pt-br">
 
-  <body>
-    <header class="cabecalho">
-      <img
-        class="cabecalho-imagem"
-        src="img/profile-pic.png"
-        alt="Foto de perfil de Daniel"
-      />
-      <nav class="cabecalho-menu">
-        <a
-          class="cabecalho-menu-item"
-          href="https://linkedin.com/in/danielsouza-data"
-          target="_blank"
-          >LinkedIn</a
-        >
-        <a
-          class="cabecalho-menu-item"
-          href="https://wa.me/5511960800223"
-          target="_blank"
-          >WhatsApp</a
-        >
-        <a
-          class="cabecalho-menu-item"
-          href="docs/Daniel Souza.pdf"
-          target="_blank"
-          download
-          >Curriculo em PDF</a
-        >
-      </nav>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Souza | Portifólio</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
 
-    <main class="conteudo">
-      <section class="conteudo-principal">
-        <div class="conteudo-principal-escrito">
-          <h1 class="conteudo-principal-escrito-titulo">
-            Daniel Souza dos Santos
-          </h1>
-          <h2 class="conteudo-principal-escrito-subtitulo">
-            Essa é minha página de apresentação e portifólio
-          </h2>
-          <button class="conteudo-principal-botao">
-            <a href="https://github.com/danielsouza-data" target="_blank"
-              >GitHub</a
-            >
-          </button>
-        </div>
-        <img
-          class="conteudo-principal-imagem"
-          src="img/profile-pic (1).png"
-          alt="Imagem de perfil com estilização"
-        />
-      </section>
-      <section class="conteudo-secundario">
-        <h3 class="conteudo-secundario-escrito">Minhas principais Skills</h3>
-        <p class="conteudo-secundario-paragrafo">Data Analytics</p>
-        <p class="conteudo-secundario-paragrafo">Power BI</p>
-        <p class="conteudo-secundario-paragrafo">SQL</p>
-        <p class="conteudo-secundario-paragrafo">Pyhton</p>
-        <p class="conteudo-secundario-paragrafo">Excel</p>
-        <p class="conteudo-secundario-paragrafo">Power Query</p>
-        <p class="conteudo-secundario-paragrafo">Power Automate</p>
-        <p class="conteudo-secundario-paragrafo">Google BigQuery</p>
-        <p class="conteudo-secundario-paragrafo">CDP Insider</p>
-        <p class="conteudo-secundario-paragrafo">Git e GitHub</p>
-        <p class="conteudo-secundario-paragrafo">HTML5</p>
-        <p class="conteudo-secundario-paragrafo">CSS3</p>
-      </section>
+<body>
+    <div class="particulas">
+
+    </div>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#projetos" class="menu-link">Projetos</a></li>
+            <li><a href="#contatos" class="menu-link">Contato</a></li>
+            <li><a href="./docs/Daniel Souza.pdf"  class="menu-link" target="_blank" download>Currículo</a></li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+    <img src="./img/profile-pic (1).png" alt="Foto de perfil de Daniel Souza" class="perfil-imagem">
+    <h1>Daniel Souza</h1>
+    <p class="cabecalho-sub">Especialista em Dados</p>
     </main>
 
-    <footer class="rodape">
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-conteudo">
+            <p class="sobre-texto">
+                Olá! Sou Daniel Souza, um especialista em dados com experiência em análise, manipulação e visualização
+                de dados. Minha vocação é transformar dados brutos em insights valiosos que ajudam as empresas a tomar
+                decisões informadas.
+                Tenho trabalhado com diversas ferramentas e tecnologias, incluindo Python, SQL, CDP e Power BI. Estou
+                sempre em busca de aprender novas habilidades e me manter atualizado com as últimas tendências em
+                análise de dados.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-lista">
+            <div class="projetos-card">
+                <img src="./img/profile-pic.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="projetos-caixa-textos">
+                    <h3 class="info-projetos">Projeto 1: Análise de Vendas</h3>
+                    <p class="paragrafo-projetos">Uma análise detalhada das vendas de uma empresa, identificando
+                        tendências e oportunidades de crescimento.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/profile-pic.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="projetos-caixa-textos">
+                    <h3 class="info-projetos">Projeto 2: Análise de Vendas</h3>
+                    <p class="paragrafo-projetos">Uma análise detalhada das vendas de uma empresa, identificando
+                        tendências e oportunidades de crescimento.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/profile-pic.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="projetos-caixa-textos">
+                    <h3 class="info-projetos">Projeto 3: Análise de Vendas</h3>
+                    <p class="paragrafo-projetos">Uma análise detalhada das vendas de uma empresa, identificando
+                        tendências e oportunidades de crescimento.</p>
+                </div>
+            </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="contatos-formulario" id="formulario" onsubmit="enviarWhatsApp(event)">
+            <label for="nome">Nome:</label>
+            <div class="campo-input">
+                <input class="campo-input" type="text" id="nome" name="nome" required>
+            </div>
+
+            <label for="mensagem">Mensagem:</label>
+            <div class="campo-input">
+                <textarea class="campo-input" id="mensagem" name="mensagem" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+
+        <footer class="rodape">
       <p class="rodape-paragrafo">&copy Todos os direitos Reservados</p>
     </footer>
-  </body>
+
+    <script>
+
+        function enviarWhatsApp(event) {
+            event.preventDefault()
+            // Impede o envio do formulário padrão
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5511960800223';
+
+            const texto = `Olá Daniel, meu nome é ${nome.value}, ${mensagem.value}`;
+            const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(texto)}`;
+
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+
 </html>
