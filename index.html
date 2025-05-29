@@ -18,14 +18,14 @@
             <li><a href="#sobre" class="menu-link">Sobre</a></li>
             <li><a href="#projetos" class="menu-link">Projetos</a></li>
             <li><a href="#contatos" class="menu-link">Contato</a></li>
-            <li><a href="docs/Daniel Souza.pdf"  class="menu-link" target="_blank" download>Currículo</a></li>
+            <li><a href="docs/Daniel Souza.pdf" class="menu-link" target="_blank" download>Currículo</a></li>
         </ul>
     </nav>
 
     <main id="inicio" class="cabecalho">
-    <img src="img/profile-pic (1).png" alt="Foto de perfil de Daniel Souza" class="perfil-imagem">
-    <h1>Daniel Souza</h1>
-    <p class="cabecalho-sub">Especialista em Dados</p>
+        <img src="img/profile-pic (1).png" alt="Foto de perfil de Daniel Souza" class="perfil-imagem">
+        <h1>Daniel Souza</h1>
+        <p class="cabecalho-sub">Especialista em Dados</p>
     </main>
 
     <section id="sobre" class="sobre">
@@ -89,24 +89,24 @@
         </form>
 
         <footer class="rodape">
-      <p class="rodape-paragrafo">&copy Todos os direitos Reservados</p>
-    </footer>
+            <p class="rodape-paragrafo">&copy Todos os direitos Reservados</p>
+        </footer>
 
-    <script>
+        <script>
 
-        function enviarWhatsApp(event) {
-            event.preventDefault()
-            // Impede o envio do formulário padrão
-            const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem').value;
-            const telefone = '5511960800223';
+            function enviarWhatsApp(event) {
+                event.preventDefault()
+                // Impede o envio do formulário padrão
+                const nome = document.getElementById('nome').value;
+                const mensagem = document.getElementById('mensagem').value;
+                const telefone = '5511960800223';
 
-            const texto = `Olá Daniel, meu nome é ${nome.value}, ${mensagem.value}`;
-            const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(texto)}`;
+                const texto = `Olá Daniel, meu nome é ${nome.value}, ${mensagem.value}`;
+                const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(texto)}`;
 
-            window.open(url, '_blank');
-        }
-    </script>
+                window.open(url, '_blank');
+            }
+        </script>
 </body>
 
 </html>

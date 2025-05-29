@@ -91,18 +91,18 @@ h1 {
     color: var(--white)
 }
 
-.sobre{
+.sobre {
     padding: 6rem 2rem;
 }
 
-.sobre-titulo{
+.sobre-titulo {
     font-size: 3rem;
     color: var(--white);
     text-align: center;
     margin-bottom: 20px;
 }
 
-.sobre-conteudo{
+.sobre-conteudo {
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
@@ -112,7 +112,7 @@ h1 {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.sobre-texto{
+.sobre-texto {
     text-align: center;
     font-size: 1rem;
 }
@@ -150,7 +150,7 @@ h1 {
     cursor: pointer;
 }
 
-.projetos-imagem{
+.projetos-imagem {
     height: 200px;
     width: 100%;
     object-fit: cover;
@@ -203,7 +203,7 @@ h1 {
     border-color: var(--secondary-color);
 }
 
-.botao-form{
+.botao-form {
     color: var(--white);
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     padding: 1rem 2rem;
@@ -214,12 +214,12 @@ h1 {
     transition: all 0.5s ease;
 }
 
-.botao-form:hover{
+.botao-form:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 20px rgba(79, 70, 229, 0.4);
 }
 
-.particulas{
+.particulas {
     position: fixed;
     top: 0;
     left: 0;
@@ -228,29 +228,32 @@ h1 {
     z-index: -1;
     opacity: 0.5;
     background:
-    radial-gradient(circle at 10% 20%, var(--primary-color) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, var(--secondary-color) 0%, transparent 20%),
-    var(--moreBlack)
+        radial-gradient(circle at 10% 20%, var(--primary-color) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, var(--secondary-color) 0%, transparent 20%),
+        var(--moreBlack)
 }
 
 @keyframes flutuar {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
 }
 
 .rodape {
-  padding: 20px;
+    padding: 20px;
 }
 
 .rodape-paragrafo {
-  font-family: "Sarala", sans-serif;
-  color: #ffffff;
-  font-weight: 80;
-  font-size: 10px;
-  margin: 0 auto;
-  text-align: center;
+    font-family: "Sarala", sans-serif;
+    color: #ffffff;
+    font-weight: 80;
+    font-size: 10px;
+    margin: 0 auto;
+    text-align: center;
 }
