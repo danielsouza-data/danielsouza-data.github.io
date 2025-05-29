@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Souza | Portifólio</title>
+    <link rel="stylesheet" href="styles-new.css">
+</head>
+
+<body>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#projetos" class="menu-link">Projetos</a></li>
+            <li><a href="#contatos" class="menu-link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho"></main>
+    <img src="./img/profile-pic.png" alt="Foto de perfil de Daniel Souza" class="perfil-imagem">
+    <h1>Daniel Souza</h1>
+    <p class="cabecalho-sub">Especialista em Dados</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-conteudo">
+            <p class="sobre-texto">
+                Olá! Sou Daniel Souza, um especialista em dados com experiência em análise, manipulação e visualização
+                de dados. Minha vocação é transformar dados brutos em insights valiosos que ajudam as empresas a tomar
+                decisões informadas.
+                Tenho trabalhado com diversas ferramentas e tecnologias, incluindo Python, SQL, CDP e Power BI. Estou
+                sempre em busca de aprender novas habilidades e me manter atualizado com as últimas tendências em
+                análise de dados.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-lista">
+            <div class="projetos-card">
+                <img src="img/projeto1.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="projetos-caixa-textos">
+                    <h3 class="info-projetos">Projeto 1: Análise de Vendas</h3>
+                    <p class="paragrafo-projetos">Uma análise detalhada das vendas de uma empresa, identificando
+                        tendências e oportunidades de crescimento.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="projetos-caixa-textos">
+                    <h3 class="info-projetos">Projeto 1: Análise de Vendas</h3>
+                    <p class="paragrafo-projetos">Uma análise detalhada das vendas de uma empresa, identificando
+                        tendências e oportunidades de crescimento.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/projeto3.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="projetos-caixa-textos">
+                    <h3 class="info-projetos">Projeto 1: Análise de Vendas</h3>
+                    <p class="paragrafo-projetos">Uma análise detalhada das vendas de uma empresa, identificando
+                        tendências e oportunidades de crescimento.</p>
+                </div>
+            </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="contatos-formulario" id="formulario">
+            <label for="nome">Nome:</label>
+            <div class="name-input">
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <label for="email">E-mail:</label>
+            <div class="email-input">
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <label for="telefone">Telefone:</label>
+            <div class="phone-input">
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+
+            <label for="mensagem">Mensagem:</label>
+            <div class="message-input">
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+</body>
+
+</html>
