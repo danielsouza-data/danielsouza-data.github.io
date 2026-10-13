@@ -1,29 +1,32 @@
-# 1.5. Atualização 🖱️
+# danielsouza-data.github.io
 
-Nessa versão foram utilizadas novas técnicas de estrutura de HTML, realizando algumas animações, criação de estilização e principalmente a mais nova implementação de um script para envio de formulário pelo JavaScript incorporado ao HTML.
+Portfólio de Daniel Souza, publicado em <https://danielsouza-data.github.io/>.
 
-Usado como referência o vídeo do Youtube: https://youtu.be/V1vmK3EOCuI?si=kuctJtmiHLVYWQiV
+Site estático em HTML, CSS e JavaScript puros, sem etapa de build. O GitHub Pages publica o conteúdo da branch `main`.
 
-# 1.4. Migração de repositório 💾
+## Estrutura
 
-Repositório migrado para o danielsouza-data.github.io
+- `index.html`: página única com abertura, projetos, trajetória, textos do LinkedIn, ferramentas, formação e contato.
+- `assets/css/site.css`: estilos, com tema claro e escuro conforme o sistema.
+- `assets/js/site.js`: abre e fecha o detalhe de cada cargo na trajetória.
+- `assets/img/`: avatar em pixel art.
+- `docs/`: currículos em português e em inglês para download.
+- `404.html`: página de endereço não encontrado.
 
-# 1.3. Atualização 🖱️
+## Rodar localmente
 
-Nessa versão utilizei a macro CSS @media screen para fazer uma versão compativel com dispositivos móveis.
-Feito a responsividade e sobrescrição do código, mantendo o layout desktop como inicialmente.
+```
+python -m http.server 8000
+```
 
-# 1.2. Migração de repositório 💾
+Depois, abra <http://localhost:8000>.
 
-Repositório migrado para o dansouzaeu.github.io
+## Editar a trajetória
 
-Esse repositório contém informações de contatos pessoais, mas não sensíveis, e pode ser clonado.
+Cada cargo é um `<li class="cargo">` em `index.html`. A posição da barra vem de `--s` (início) e `--e` (fim), em porcentagem do eixo de 2017 a 2027:
 
-# 1.1. Atualização 🖱️
+```
+(ano + (mês - 1) / 12 - 2017) / 10 * 100
+```
 
-Na versão anterior o botão para direcionar o usuário final estava com uma cor aplicada, foi solucionando inserindo um novo estilo em CSS anulando o Text-decoration da class do button.
-
-# 1. Primeiro Projeto em HTML 📝
-
-Esse projeto é uma landingpage para visualização do meu "curriculo" de forma digital.
-Foi desenvolvido com base nos ensinamentos de Rafaella Ballerini (https://github.com/rafaballerini/) uma excelente mentora!
+Para o fim de um cargo, use o mês seguinte ao último mês trabalhado.

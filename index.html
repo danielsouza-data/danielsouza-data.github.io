@@ -1,110 +1,452 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Souza | Portifólio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daniel Souza | Analista de Dados Sênior, CRM e Marketing Analytics</title>
+    <meta name="description" content="Daniel Souza é Analista de Dados Sênior em Marketing Analytics na Cogna Educação. Trabalha com SQL, BigQuery e Power BI em dados de CRM, em São Paulo.">
+    <meta name="author" content="Daniel Souza dos Santos">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#F2F4F8" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0E1730" media="(prefers-color-scheme: dark)">
+    <link rel="canonical" href="https://danielsouza-data.github.io/">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://danielsouza-data.github.io/">
+    <meta property="og:title" content="Daniel Souza | Analista de Dados Sênior">
+    <meta property="og:description" content="Marketing Analytics na Cogna Educação. SQL, BigQuery e Power BI aplicados a dados de CRM.">
+    <meta property="og:image" content="https://danielsouza-data.github.io/assets/img/daniel-souza-og.jpg">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="assets/css/site.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Daniel Souza dos Santos",
+        "alternateName": "Daniel Souza",
+        "url": "https://danielsouza-data.github.io/",
+        "image": "https://danielsouza-data.github.io/assets/img/daniel-souza-og.jpg",
+        "jobTitle": "Analista de Dados Sênior",
+        "worksFor": { "@type": "Organization", "name": "Cogna Educação" },
+        "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" },
+        "knowsAbout": ["Power BI", "DAX", "SQL", "SQL Server", "Google BigQuery", "Python", "ETL", "Data Modeling", "CRM Analytics", "Marketing Analytics", "Customer Data Platform"],
+        "sameAs": [
+            "https://www.linkedin.com/in/danielsouza-data/",
+            "https://github.com/danielsouza-data"
+        ]
+    }
+    </script>
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
-    <div class="particulas"></div>
-    <nav class="navegacao">
-        <ul class="menu">
-            <li><a href="#inicio" class="menu-link">Início</a></li>
-            <li><a href="#sobre" class="menu-link">Sobre</a></li>
-            <li><a href="#projetos" class="menu-link">Projetos</a></li>
-            <li><a href="#contatos" class="menu-link">Contato</a></li>
-            <li><a href="docs/Daniel Souza.pdf" class="menu-link" target="_blank" download>Currículo</a></li>
-            <li><a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=danielsouza-data" target="_blank">Seguir no LinkedIn</a></li>
-        </ul>
-    </nav>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-    <main id="inicio" class="cabecalho">
-        <img src="img/pf_pic.png" alt="Foto de perfil de Daniel Souza" class="perfil-imagem">
-        <h1>Daniel Souza</h1>
-        <p class="cabecalho-sub">Especialista em Dados</p>
+    <header class="topo">
+        <a class="topo__nome" href="#inicio">Daniel Souza</a>
+        <nav class="topo__nav" aria-label="Seções">
+            <ul>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#trajetoria">Trajetória</a></li>
+                <li><a href="#textos">Textos</a></li>
+                <li><a href="#ferramentas">Ferramentas</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <a class="botao botao--contorno topo__cv" href="docs/daniel-souza-curriculo-pt.pdf" download>Baixar currículo</a>
+    </header>
+
+    <main id="conteudo">
+        <section class="abertura" id="inicio">
+            <div class="abertura__texto">
+                <h1>Mostro quais campanhas de CRM viram matrícula e quanto cada uma custou.</h1>
+                <p class="abertura__resumo">
+                    Sou Daniel Souza, Analista de Dados Sênior em Marketing Analytics na Cogna Educação,
+                    em São Paulo. Há mais de sete anos levo o dado do pipeline em SQL e BigQuery até o
+                    dashboard em Power BI que a diretoria usa para decidir o orçamento.
+                </p>
+                <div class="abertura__acoes">
+                    <a class="botao botao--cheio" href="#contato">Falar comigo</a>
+                    <a class="botao botao--contorno" href="https://www.linkedin.com/in/danielsouza-data/" rel="me noopener" target="_blank">Ver LinkedIn</a>
+                </div>
+            </div>
+            <picture class="abertura__foto">
+                <source type="image/webp" srcset="assets/img/daniel-souza-320.webp 320w, assets/img/daniel-souza-640.webp 640w" sizes="(min-width: 900px) 260px, 132px">
+                <img src="assets/img/daniel-souza.png" width="400" height="400" alt="Avatar de Daniel Souza em pixel art, sorrindo, dentro de um círculo azul">
+            </picture>
+        </section>
+
+        <section class="secao" id="projetos" aria-labelledby="projetos-titulo">
+            <div class="secao__cabeca">
+                <h2 id="projetos-titulo">Dois projetos na Cogna Educação</h2>
+                <p>Em cada um, o caminho do dado: de onde ele vem, por quais camadas passa e onde vira decisão.</p>
+            </div>
+
+            <article class="caso">
+                <header class="caso__cabeca">
+                    <h3>Insider Architect Analytics</h3>
+                    <p>Plataforma de analytics e ROI para a Central de Relacionamento, 2026</p>
+                </header>
+
+                <ol class="fluxo" aria-label="Caminho do dado">
+                    <li data-tipo="fonte"><strong>API da Insider e BigQuery</strong><span>Engajamento, conversão, receita e captação</span></li>
+                    <li data-tipo="camada"><strong>Raw</strong><span>Ingestão diária e backfill em blocos de 10 dias</span></li>
+                    <li data-tipo="camada"><strong>Staging</strong><span>Taxonomia e padronização das métricas</span></li>
+                    <li data-tipo="camada"><strong>Datamart</strong><span>Materialized views no PostgreSQL</span></li>
+                    <li data-tipo="entrega"><strong>Dashboard executivo</strong><span>ROAS, CPA e ROI por canal e ciclo de captação</span></li>
+                </ol>
+
+                <div class="caso__corpo">
+                    <div>
+                        <h4>Desafio</h4>
+                        <p>
+                            Juntar as métricas de campanhas da API da Insider com o histórico de conversão,
+                            receita e captação, e calcular o retorno de WhatsApp, e-mail, SMS e push sem
+                            cruzar dados à mão.
+                        </p>
+                    </div>
+                    <div>
+                        <h4>O que construí</h4>
+                        <ul>
+                            <li>Dashboard full-stack em Next.js, React, Recharts, Supabase e BigQuery.</li>
+                            <li>Pipelines de ingestão com Vercel Cron, token bucket para o limite da API e GitHub Actions encadeadas, contornando o timeout de 6 horas.</li>
+                            <li>Cache com revalidação por tags, agregações e paginação no servidor para grandes volumes.</li>
+                            <li>Row Level Security, acesso restrito a domínios corporativos, testes com Vitest e CI/CD.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Resultado</h4>
+                        <ul>
+                            <li>Fim do cruzamento manual dos dados de captação.</li>
+                            <li>Executivos passaram a ver quais canais e jornadas geram mais matrículas, o que apoia a alocação do orçamento de marketing.</li>
+                            <li>Métricas consistentes, garantidas pelo módulo de taxonomia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="caso">
+                <header class="caso__cabeca">
+                    <h3>Dashboard integrado de CRM multicanal</h3>
+                    <p>Monitoramento da jornada completa de CRM, 2025</p>
+                </header>
+
+                <ol class="fluxo" aria-label="Caminho do dado">
+                    <li data-tipo="fonte"><strong>E-mail, SMS e WhatsApp</strong><span>Dados de várias fontes de campanha</span></li>
+                    <li data-tipo="camada"><strong>Raw</strong><span>Dado bruto no BigQuery</span></li>
+                    <li data-tipo="camada"><strong>Staging</strong><span>Limpeza e padronização</span></li>
+                    <li data-tipo="camada"><strong>Analytics</strong><span>Métricas prontas para consumo</span></li>
+                    <li data-tipo="entrega"><strong>Power BI</strong><span>Funil por período, canal e persona</span></li>
+                </ol>
+
+                <div class="caso__corpo">
+                    <div>
+                        <h4>Desafio</h4>
+                        <p>
+                            A jornada de CRM era analisada à mão, em várias planilhas. Faltava uma solução
+                            automatizada para comparar canais, campanhas e personas.
+                        </p>
+                    </div>
+                    <div>
+                        <h4>O que construí</h4>
+                        <ul>
+                            <li>Arquitetura de dados em camadas no BigQuery para organizar as fontes.</li>
+                            <li>Dashboards em Power BI com métricas padronizadas: entregas, aberturas, cliques, inscritos aprovados e matrículas.</li>
+                            <li>Taxas de conversão por período, canal e segmento em DAX.</li>
+                            <li>Análise de funil para localizar gargalos.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Resultado</h4>
+                        <ul>
+                            <li>30% menos tempo de análise para a equipe de marketing.</li>
+                            <li>Fim dos processos manuais e das múltiplas planilhas.</li>
+                            <li>Uma única fonte de dados para decidir o investimento em campanhas.</li>
+                            <li>Dashboards adotados nas reuniões executivas e no planejamento de orçamento.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="secao trajetoria" id="trajetoria" aria-labelledby="trajetoria-titulo">
+            <div class="secao__cabeca">
+                <h2 id="trajetoria-titulo">Trajetória, de 2017 até hoje</h2>
+                <p>Cada barra é um cargo, posicionada no tempo. Selecione um cargo para ver o que fiz nele.</p>
+            </div>
+
+            <ul class="legenda" aria-label="Fases da carreira">
+                <li><span class="legenda__cor" data-fase="dados"></span>CRM e marketing analytics</li>
+                <li><span class="legenda__cor" data-fase="planejamento"></span>Planejamento e SQL</li>
+                <li><span class="legenda__cor" data-fase="operacao"></span>Indicadores de operação</li>
+            </ul>
+
+            <div class="grafico">
+                <div class="grafico__eixo" aria-hidden="true">
+                    <span></span>
+                    <ol>
+                        <li>2017</li><li>2018</li><li>2019</li><li>2020</li><li>2021</li>
+                        <li>2022</li><li>2023</li><li>2024</li><li>2025</li><li>2026</li>
+                    </ol>
+                </div>
+
+                <ol class="grafico__linhas" reversed>
+                    <li class="cargo" data-fase="dados" style="--s:86.67;--e:98.33;--i:0">
+                        <h3 class="cargo__titulo">
+                            <button class="cargo__linha" type="button" aria-expanded="true" aria-controls="cargo-cogna-senior">
+                                <span class="cargo__rotulo">
+                                    <span class="cargo__nome">Analista de Dados Sênior, Marketing Analytics</span>
+                                    <span class="cargo__empresa">Cogna Educação</span>
+                                    <span class="cargo__periodo">set 2025 até hoje</span>
+                                </span>
+                                <span class="cargo__trilho" aria-hidden="true"><span class="cargo__barra"></span></span>
+                            </button>
+                        </h3>
+                        <div class="cargo__detalhe" id="cargo-cogna-senior">
+                            <ul>
+                                <li>Lidero projetos de BI em CRM Analytics e na jornada do cliente por e-mail, SMS e WhatsApp.</li>
+                                <li>Desenvolvo dashboards em Power BI sobre BigQuery, com dados em camadas (raw, staging, analytics), que substituíram as planilhas manuais da área de CRM.</li>
+                                <li>Implemento KPIs de ROI para campanhas de retenção e engajamento: entrega, abertura, clique, inscrição e matrícula por canal, período e persona.</li>
+                                <li>Analiso o funil de conversão para apontar gargalos e orientar o investimento em marketing.</li>
+                                <li>Uso SQL avançado (joins complexos, CTEs, window functions) em grandes volumes de dados.</li>
+                                <li>Apresento os resultados a executivos de várias áreas.</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cargo" data-fase="dados" style="--s:82.5;--e:86.67;--i:1">
+                        <h3 class="cargo__titulo">
+                            <button class="cargo__linha" type="button" aria-expanded="false" aria-controls="cargo-cogna-dados">
+                                <span class="cargo__rotulo">
+                                    <span class="cargo__nome">Consultor de Dados</span>
+                                    <span class="cargo__empresa">Cogna Educação, via Jump Label Solutions</span>
+                                    <span class="cargo__periodo">abr a set 2025</span>
+                                </span>
+                                <span class="cargo__trilho" aria-hidden="true"><span class="cargo__barra"></span></span>
+                            </button>
+                        </h3>
+                        <div class="cargo__detalhe" id="cargo-cogna-dados">
+                            <ul>
+                                <li>Consultoria em análise de dados, dashboards e visualização para a área de CRM.</li>
+                                <li>Identifiquei os principais ofensores de performance com análise exploratória e propus melhorias.</li>
+                                <li>Criei e mantive dashboards em Power BI para os KPIs de marketing e engajamento.</li>
+                                <li>Fiz segmentação de clientes e análise de comportamento para otimizar campanhas.</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cargo" data-fase="dados" style="--s:73.33;--e:82.5;--i:2">
+                        <h3 class="cargo__titulo">
+                            <button class="cargo__linha" type="button" aria-expanded="false" aria-controls="cargo-cogna-dbm">
+                                <span class="cargo__rotulo">
+                                    <span class="cargo__nome">Consultor de DBM (Database Marketing)</span>
+                                    <span class="cargo__empresa">Cogna Educação, via Jump Label Solutions</span>
+                                    <span class="cargo__periodo">mai 2024 a abr 2025</span>
+                                </span>
+                                <span class="cargo__trilho" aria-hidden="true"><span class="cargo__barra"></span></span>
+                            </button>
+                        </h3>
+                        <div class="cargo__detalhe" id="cargo-cogna-dbm">
+                            <ul>
+                                <li>Criei, mantive e mensurei jornadas de clientes em CDP para automação de campanhas multicanal.</li>
+                                <li>Desenvolvi o modelo de mensuração dos resultados de CRM, para demonstrar valor e ROI.</li>
+                                <li>Implementei segmentação de audiências por comportamento, demografia e histórico de engajamento.</li>
+                                <li>Automatizei os relatórios gerenciais de performance das jornadas.</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cargo" data-fase="planejamento" style="--s:47.5;--e:71.67;--i:3">
+                        <h3 class="cargo__titulo">
+                            <button class="cargo__linha" type="button" aria-expanded="false" aria-controls="cargo-rbrasil">
+                                <span class="cargo__rotulo">
+                                    <span class="cargo__nome">Analista de Planejamento e Database Marketing</span>
+                                    <span class="cargo__empresa">RBrasil Soluções</span>
+                                    <span class="cargo__periodo">out 2021 a fev 2024</span>
+                                </span>
+                                <span class="cargo__trilho" aria-hidden="true"><span class="cargo__barra"></span></span>
+                            </button>
+                        </h3>
+                        <div class="cargo__detalhe" id="cargo-rbrasil">
+                            <ul>
+                                <li>Desenvolvi KPIs para o planejamento operacional e para as decisões dos comitês executivos.</li>
+                                <li>Criei e mantive stored procedures e SQL jobs no SQL Server para automatizar a extração e a transformação de dados.</li>
+                                <li>Implementei relatórios para a diretoria com execução automática.</li>
+                                <li>Escrevi consultas SQL complexas sobre grandes volumes de dados e otimizei as existentes.</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cargo" data-fase="operacao" style="--s:6.67;--e:41.67;--i:4">
+                        <h3 class="cargo__titulo">
+                            <button class="cargo__linha" type="button" aria-expanded="false" aria-controls="cargo-flex">
+                                <span class="cargo__rotulo">
+                                    <span class="cargo__nome">Assistente de Control Desk</span>
+                                    <span class="cargo__empresa">Flex Contact Center</span>
+                                    <span class="cargo__periodo">set 2017 a fev 2021</span>
+                                </span>
+                                <span class="cargo__trilho" aria-hidden="true"><span class="cargo__barra"></span></span>
+                            </button>
+                        </h3>
+                        <div class="cargo__detalhe" id="cargo-flex">
+                            <ul>
+                                <li>Acompanhei os indicadores de performance das operações em ASPECT, UIP e Excel.</li>
+                                <li>Criei e gerenciei listas de contratos e mailings para campanhas de relacionamento.</li>
+                                <li>Desenvolvi relatórios de monitoramento em Excel, com tabelas dinâmicas e análise de tendências.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="secao" id="textos" aria-labelledby="textos-titulo">
+            <div class="secao__cabeca">
+                <h2 id="textos-titulo">O que escrevo no LinkedIn</h2>
+                <p>Textos curtos sobre o que aprendo no dia a dia de CRM e dados.</p>
+            </div>
+
+            <ul class="textos">
+                <li>
+                    <h3><a href="https://www.linkedin.com/feed/update/urn:li:activity:7515737151679025152/" rel="noopener" target="_blank">Já vi time pedir mais verba pro topo do funil quando o problema estava no meio.</a></h3>
+                    <p>Por que rever o critério de MQL e o prazo de resposta ao lead vem antes de falar em orçamento.</p>
+                </li>
+                <li>
+                    <h3><a href="https://www.linkedin.com/feed/update/urn:li:activity:7513199671687667712/" rel="noopener" target="_blank">Dashboard lento não é só tech, é adoção.</a></h3>
+                    <p>Quando o painel demora, o time volta para a planilha. O que usamos para ele responder rápido: views materializadas, cache no servidor e testes.</p>
+                </li>
+                <li>
+                    <h3><a href="https://www.linkedin.com/feed/update/urn:li:activity:7513950059042926592/" rel="noopener" target="_blank">Atribuição de ROI em CRM multi-touch só funciona se a base for confiável.</a></h3>
+                    <p>O padrão raw, staging e analytics que uso, e o que acontece em cada camada.</p>
+                </li>
+                <li>
+                    <h3><a href="https://www.linkedin.com/feed/update/urn:li:activity:7465498006650322944/" rel="noopener" target="_blank">Analytics bem estruturado não deveria funcionar como bombeiro. Deveria funcionar como sensor.</a></h3>
+                    <p>Sobre monitorar os indicadores certos antes que o problema apareça na reunião de diretoria.</p>
+                </li>
+            </ul>
+
+            <p class="textos__mais"><a href="https://www.linkedin.com/in/danielsouza-data/recent-activity/all/" rel="noopener" target="_blank">Ver todas as publicações no LinkedIn</a></p>
+        </section>
+
+        <section class="secao" id="ferramentas" aria-labelledby="ferramentas-titulo">
+            <div class="secao__cabeca">
+                <h2 id="ferramentas-titulo">Ferramentas e como uso cada uma</h2>
+            </div>
+
+            <dl class="ferramentas">
+                <div>
+                    <dt>SQL</dt>
+                    <dd>SQL Server, T-SQL, BigQuery e MySQL. Stored procedures, jobs, CTEs, window functions e otimização de consultas.</dd>
+                </div>
+                <div>
+                    <dt>Power BI</dt>
+                    <dd>DAX, Power Query e modelagem de dados para dashboards de CRM e de diretoria.</dd>
+                </div>
+                <div>
+                    <dt>Engenharia de dados</dt>
+                    <dd>ETL e ELT, pipelines em camadas (raw, staging, analytics) e desenho de data warehouse no Google BigQuery.</dd>
+                </div>
+                <div>
+                    <dt>CRM e CDP</dt>
+                    <dd>Jornadas de clientes, segmentação de audiências, automação de campanhas e mensuração de ROI por canal.</dd>
+                </div>
+                <div>
+                    <dt>Python</dt>
+                    <dd>Pandas, NumPy e Matplotlib para limpeza e análise de dados.</dd>
+                </div>
+                <div>
+                    <dt>Desenvolvimento web</dt>
+                    <dd>Next.js, React, Tailwind CSS, Supabase (PostgreSQL), Vercel, GitHub Actions e testes com Vitest.</dd>
+                </div>
+                <div>
+                    <dt>Também uso</dt>
+                    <dd>Looker Studio, Tableau, Excel (Power Query e VBA), R, Google Analytics, Git e GitHub.</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="secao" id="formacao" aria-labelledby="formacao-titulo">
+            <div class="secao__cabeca">
+                <h2 id="formacao-titulo">Formação e certificações</h2>
+            </div>
+
+            <div class="formacao">
+                <div class="formacao__graus">
+                    <div class="formacao__grau">
+                        <h3>Tecnólogo em Ciência de Dados</h3>
+                        <p>Anhanguera Educação, 2025 a 2027, em andamento</p>
+                    </div>
+                    <div class="formacao__grau">
+                        <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+                        <p>Faculdade Impacta, 2023 a 2026, em andamento</p>
+                    </div>
+                </div>
+
+                <div class="formacao__cursos">
+                    <div>
+                        <h3>Análise de dados e BI</h3>
+                        <ul>
+                            <li>Boas Práticas para Criação de Relatórios no Power BI <span>Cogna Educação, 2026</span></li>
+                            <li>Business Intelligence (BI) <span>FIAP, 2025</span></li>
+                            <li>Big Data &amp; Analytics <span>FIAP, 2025</span></li>
+                            <li>Série Power BI, cinco cursos: introdução, preparação, modelagem, visualização e análise de dados <span>Fundação Bradesco, 2023</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Banco de dados e SQL</h3>
+                        <ul>
+                            <li>Programação em T-SQL <span>Faculdade Impacta, 2025</span></li>
+                            <li>SQL Completo com Google BigQuery para Análise de Dados <span>Udemy, 2024</span></li>
+                            <li>SQL 2016: Criando Sistemas de Banco de Dados <span>Faculdade Impacta, 2023</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Programação e engenharia de dados</h3>
+                        <ul>
+                            <li>Python: Do Básico ao Avançado <span>Jump, 2025</span></li>
+                            <li>Certificação SAS, Engenharia de Dados <span>Udemy, 2023</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>IA e cloud</h3>
+                        <ul>
+                            <li>Introduction to Large Language Models <span>Google Cloud Skills Boost, 2024</span></li>
+                            <li>Introduction to Generative AI <span>Google Cloud Skills Boost, 2024</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contato" id="contato" aria-labelledby="contato-titulo">
+            <h2 id="contato-titulo">Vamos conversar sobre os seus dados</h2>
+            <p>Respondo mais rápido por e-mail e pelo LinkedIn.</p>
+            <a class="contato__email" href="mailto:comercial.danielsantos@gmail.com">comercial.danielsantos@gmail.com</a>
+            <ul class="contato__links">
+                <li><a href="https://www.linkedin.com/in/danielsouza-data/" rel="me noopener" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/danielsouza-data" rel="me noopener" target="_blank">GitHub</a></li>
+                <li><a href="https://wa.me/5511960800223" rel="noopener" target="_blank">WhatsApp</a></li>
+                <li><a href="docs/daniel-souza-curriculo-pt.pdf" download>Currículo em português (PDF)</a></li>
+                <li><a href="docs/daniel-souza-resume-en.pdf" download hreflang="en" lang="en">Résumé in English (PDF)</a></li>
+            </ul>
+        </section>
     </main>
 
-    <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre Mim</h2>
-        <div class="sobre-conteudo">
-            <p class="sobre-texto">
-                Olá!<br>
-                Sou Daniel Souza, um especialista em dados com experiência em análise, manipulação e visualização de dados.<br>
-                Minha vocação é transformar dados brutos em insights valiosos que ajudam as empresas a tomar decisões informadas.<br>
-                Tenho trabalhado com diversas ferramentas e tecnologias, incluindo Python, SQL, CDP e Power BI.<br>
-                Estou sempre em busca de aprender novas habilidades e me manter atualizado com as últimas tendências em análise de dados.
-            </p>
-        </div>
-    </section>
+    <footer class="rodape">
+        <p>Daniel Souza dos Santos, São Paulo.</p>
+        <p>Site em HTML, CSS e JavaScript puros. <a href="https://github.com/danielsouza-data/danielsouza-data.github.io">Ver o código</a></p>
+    </footer>
 
-    <section id="projetos" class="projetos">
-        <h2 class="projetos-titulo">Meus Projetos</h2>
-        <div class="projetos-lista">
-            <div class="projetos-card">
-                <img src="img/profile-pic.png" alt="Projeto 1" class="projetos-imagem">
-                <div class="projetos-caixa-textos">
-                    <h3 class="info-projetos">Projeto 1: Análise de Vendas</h3>
-                    <p class="paragrafo-projetos">Uma análise detalhada das vendas de uma empresa, identificando
-                        tendências e oportunidades de crescimento.</p>
-                </div>
-            </div>
-
-            <div class="projetos-card">
-                <img src="img/profile-pic.png" alt="Projeto 1" class="projetos-imagem">
-                <div class="projetos-caixa-textos">
-                    <h3 class="info-projetos">Projeto 2: Análise de Vendas</h3>
-                    <p class="paragrafo-projetos">Uma análise detalhada das vendas de uma empresa, identificando
-                        tendências e oportunidades de crescimento.</p>
-                </div>
-            </div>
-
-            <div class="projetos-card">
-                <img src="img/profile-pic.png" alt="Projeto 1" class="projetos-imagem">
-                <div class="projetos-caixa-textos">
-                    <h3 class="info-projetos">Projeto 3: Análise de Vendas</h3>
-                    <p class="paragrafo-projetos">Uma análise detalhada das vendas de uma empresa, identificando
-                        tendências e oportunidades de crescimento.</p>
-                </div>
-            </div>
-    </section>
-
-    <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Entre em Contato</h2>
-        <form class="contatos-formulario" id="formulario" onsubmit="enviarWhatsApp(event)">
-            <label for="nome">Nome:</label>
-            <div class="campo-input">
-                <input class="campo-input" type="text" id="nome" name="nome" required>
-            </div>
-
-            <label for="mensagem">Mensagem:</label>
-            <div class="campo-input">
-                <textarea class="campo-input" id="mensagem" name="mensagem" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="botao-form">Enviar WhatsApp</button>
-        </form>
-
-        <footer class="rodape">
-            <p class="rodape-paragrafo">&copy Todos os direitos Reservados</p>
-        </footer>
-
-        <script>
-
-            function enviarWhatsApp(event) {
-                event.preventDefault()
-                // Impede o envio do formulário padrão
-                const nome = document.getElementById('nome').value;
-                const mensagem = document.getElementById('mensagem').value;
-                const telefone = '5511960800223';
-
-                const texto = `Olá Daniel, meu nome é ${nome.value}, ${mensagem.value}`;
-                const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(texto)}`;
-
-                window.open(url, '_blank');
-            }
-        </script>
+    <script src="assets/js/site.js" defer></script>
 </body>
 
 </html>
