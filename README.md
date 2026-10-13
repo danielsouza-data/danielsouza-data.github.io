@@ -7,8 +7,8 @@ Site estático em HTML, CSS e JavaScript puros, sem etapa de build. O GitHub Pag
 ## Estrutura
 
 - `index.html`: página única com abertura, projetos, trajetória, textos do LinkedIn, ferramentas, formação e contato.
-- `assets/css/site.css`: estilos, com tema claro e escuro conforme o sistema.
-- `assets/js/site.js`: abre e fecha o detalhe de cada cargo na trajetória.
+- `assets/css/site.css`: estilos. O tema escuro é o padrão; o claro entra com `data-theme="light"` no `<html>`.
+- `assets/js/site.js`: detalhe dos cargos na trajetória, botão de tema e "Voltar ao topo".
 - `assets/img/`: avatar em pixel art.
 - `docs/`: currículos em português e em inglês para download.
 - `404.html`: página de endereço não encontrado.

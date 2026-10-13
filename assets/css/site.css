@@ -1,17 +1,21 @@
 /* ---------- Tokens ---------- */
 
+/* O tema escuro é o padrão; o claro entra com data-theme="light" no <html> */
 :root {
-    --papel: #F2F4F8;
-    --papel-alto: #FFFFFF;
-    --tinta: #14213D;
-    --tinta-suave: #4A5876;
-    --grade: #D3DAE6;
-    --azul: #2647D8;
+    color-scheme: dark;
+
+    --papel: #0E1730;
+    --papel-alto: #16213F;
+    --tinta: #EDF1F9;
+    --tinta-suave: #A9B5CE;
+    --grade: #2A3759;
+    --azul: #8FA6FF;
     --amarelo: #F2C811;
 
-    --serie-dados: var(--tinta);
-    --serie-planejamento: var(--azul);
-    --serie-operacao: #9DAAC2;
+    --serie-dados: var(--amarelo);
+    --serie-planejamento: #8FA6FF;
+    --serie-operacao: #5C6B8E;
+    --contato-fundo: #16213F;
 
     --fonte-titulo: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
     --fonte-texto: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
@@ -21,19 +25,20 @@
     --rotulo: 19rem;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --papel: #0E1730;
-        --papel-alto: #16213F;
-        --tinta: #EDF1F9;
-        --tinta-suave: #A9B5CE;
-        --grade: #2A3759;
-        --azul: #8FA6FF;
+:root[data-theme="light"] {
+    color-scheme: light;
 
-        --serie-dados: var(--amarelo);
-        --serie-planejamento: #8FA6FF;
-        --serie-operacao: #5C6B8E;
-    }
+    --papel: #F2F4F8;
+    --papel-alto: #FFFFFF;
+    --tinta: #14213D;
+    --tinta-suave: #4A5876;
+    --grade: #D3DAE6;
+    --azul: #2647D8;
+
+    --serie-dados: var(--tinta);
+    --serie-planejamento: var(--azul);
+    --serie-operacao: #9DAAC2;
+    --contato-fundo: #14213D;
 }
 
 /* ---------- Base ---------- */
@@ -772,7 +777,7 @@ button.cargo__linha:hover .cargo__barra {
 /* ---------- Contato ---------- */
 
 .contato {
-    background: #14213D;
+    background: var(--contato-fundo);
     color: #EDF1F9;
     padding: clamp(3.5rem, 9vw, 7rem) max(var(--margem), calc((100% - var(--largura)) / 2 + var(--margem)));
 }
@@ -819,13 +824,57 @@ button.cargo__linha:hover .cargo__barra {
     color: var(--tinta-suave);
 }
 
-@media (prefers-color-scheme: dark) {
-    .contato {
-        background: #16213F;
+/* ---------- Alternar tema e voltar ao topo ---------- */
+
+.topo__tema {
+    display: none;
+    padding: 0.5rem 1rem;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.js .topo__tema {
+    display: inline-block;
+}
+
+.voltar {
+    position: fixed;
+    right: var(--margem);
+    bottom: 1.25rem;
+    z-index: 5;
+    padding: 0.6rem 1rem;
+    background: var(--papel-alto);
+    font-size: 0.9rem;
+}
+
+.voltar:hover {
+    background: var(--tinta);
+    color: var(--papel);
+}
+
+.js .voltar {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s;
+}
+
+.js .voltar.is-visivel {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js .voltar {
+        transition: none;
     }
 }
 
 @media print {
+    .topo__tema,
+    .voltar,
     .topo__nav,
     .topo__cv,
     .abertura__acoes {

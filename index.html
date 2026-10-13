@@ -7,9 +7,8 @@
     <title>Daniel Souza | Analista de Dados Sênior, CRM e Marketing Analytics</title>
     <meta name="description" content="Daniel Souza é Analista de Dados Sênior em Marketing Analytics na Cogna Educação. Trabalha com SQL, BigQuery e Power BI em dados de CRM, em São Paulo.">
     <meta name="author" content="Daniel Souza dos Santos">
-    <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#F2F4F8" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0E1730" media="(prefers-color-scheme: dark)">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0E1730">
     <link rel="canonical" href="https://danielsouza-data.github.io/">
 
     <meta property="og:type" content="profile">
@@ -44,13 +43,19 @@
         ]
     }
     </script>
-    <script>document.documentElement.classList.add('js');</script>
+    <script>
+        // Roda antes da pintura para não piscar no tema errado. O escuro é o padrão.
+        document.documentElement.classList.add('js');
+        try {
+            if (localStorage.getItem('tema') === 'light') document.documentElement.dataset.theme = 'light';
+        } catch (e) { }
+    </script>
 </head>
 
 <body>
     <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-    <header class="topo">
+    <header class="topo" id="topo">
         <a class="topo__nome" href="#inicio">Daniel Souza</a>
         <nav class="topo__nav" aria-label="Seções">
             <ul>
@@ -62,6 +67,7 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+        <button class="botao botao--contorno topo__tema" type="button" data-tema>Modo claro</button>
         <a class="botao botao--contorno topo__cv" href="docs/daniel-souza-curriculo-pt.pdf" download>Baixar currículo</a>
     </header>
 
@@ -445,6 +451,8 @@
         <p>Daniel Souza dos Santos, São Paulo.</p>
         <p>Site em HTML, CSS e JavaScript puros. <a href="https://github.com/danielsouza-data/danielsouza-data.github.io">Ver o código</a></p>
     </footer>
+
+    <a class="botao voltar" href="#topo">Voltar ao topo</a>
 
     <script src="assets/js/site.js" defer></script>
 </body>
