@@ -922,7 +922,6 @@ button.cargo__linha:hover .cargo__barra {
     }
 }
 
-/* Avatar: os pixels em órbita só existem quando há movimento */
 .avatar {
     position: relative;
 }
@@ -931,7 +930,7 @@ button.cargo__linha:hover .cargo__barra {
     display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media screen {
 
     /* Abertura: uma sequência só, ao carregar */
     .anima .abertura h1,
@@ -1169,15 +1168,32 @@ button.cargo__linha:hover .cargo__barra {
     }
 }
 
+/* Movimento reduzido no sistema: ficam os esmaecimentos e os movimentos pequenos,
+   saem os deslocamentos de bloco e a abertura do tema em círculo */
+@keyframes surgir {
+    from {
+        opacity: 0;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
 
-    .botao,
-    .topo__nav a,
-    .pronto .voltar,
-    .pronto .voltar.is-visivel,
-    .pronto .cargo__detalhe,
-    .pronto .cargo__detalhe[data-aberto] {
-        transition: none;
+    .anima .abertura h1,
+    .anima .abertura__resumo,
+    .anima .abertura__acoes,
+    .anima .avatar {
+        animation-name: surgir;
+        animation-timing-function: ease;
+    }
+
+    .anima :is(.secao__cabeca, .caso, .legenda, .ferramentas > div, .textos li, .textos__mais, .formacao__grau, .formacao__cursos > div, .contato > *),
+    .anima .fluxo li,
+    .pronto .voltar {
+        transform: none;
+    }
+
+    ::view-transition-new(root) {
+        animation: surgir 0.3s ease;
     }
 }
 

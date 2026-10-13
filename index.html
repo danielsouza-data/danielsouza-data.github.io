@@ -52,7 +52,7 @@
             } catch (e) { }
 
             // Liga as animações de entrada. Se o site.js não carregar, desliga para nada ficar escondido.
-            if ('IntersectionObserver' in window && matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+            if ('IntersectionObserver' in window) {
                 raiz.classList.add('anima');
                 setTimeout(function () {
                     if (!window.sitePronto) raiz.classList.remove('anima');

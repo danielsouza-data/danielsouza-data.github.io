@@ -22,7 +22,6 @@ document.querySelectorAll('button.cargo__linha').forEach((botao) => {
 // Alterna entre o tema escuro (padrão) e o claro, e lembra a escolha.
 const botaoTema = document.querySelector('[data-tema]');
 const corDoNavegador = document.querySelector('meta[name="theme-color"]');
-const semMovimento = matchMedia('(prefers-reduced-motion: reduce)');
 
 function aplicarTema(claro) {
     if (claro) {
@@ -43,12 +42,13 @@ if (botaoTema) {
             localStorage.setItem('tema', claro ? 'light' : 'dark');
         } catch (e) { }
 
-        if (!document.startViewTransition || semMovimento.matches) {
+        if (!document.startViewTransition) {
             aplicarTema(claro);
             return;
         }
 
-        // O tema novo se abre em círculo a partir do botão.
+        // O tema novo se abre em círculo a partir do botão
+        // (com movimento reduzido no sistema, o CSS troca por um esmaecimento).
         const caixa = botaoTema.getBoundingClientRect();
         raiz.style.setProperty('--vx', `${caixa.left + caixa.width / 2}px`);
         raiz.style.setProperty('--vy', `${caixa.top + caixa.height / 2}px`);
