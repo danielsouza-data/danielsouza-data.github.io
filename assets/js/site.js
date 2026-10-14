@@ -68,6 +68,23 @@ if (voltar && abertura && 'IntersectionObserver' in window) {
     voltar.classList.add('is-visivel');
 }
 
+// Total de visitas do GoatCounter no rodapé. Se a consulta falhar, o rodapé fica como está.
+// O GoatCounter guarda o total em cache por até 4 horas.
+const visitas = document.querySelector('[data-visitas]');
+
+if (visitas && window.fetch) {
+    fetch('https://danielsouza.goatcounter.com/counter/TOTAL.json')
+        .then((resposta) => (resposta.ok ? resposta.json() : Promise.reject(resposta.status)))
+        .then(({ count }) => {
+            const total = Number(String(count).replace(/\D/g, ''));
+            if (!total) return;
+            visitas.querySelector('[data-visitas-total]').textContent =
+                `${total.toLocaleString('pt-BR')} ${total === 1 ? 'visita' : 'visitas'}`;
+            visitas.hidden = false;
+        })
+        .catch(() => { });
+}
+
 // Entradas ao rolar: marca cada bloco com is-visto quando ele chega à tela.
 // A lista de seletores é a mesma usada em site.css.
 if (raiz.classList.contains('anima')) {
