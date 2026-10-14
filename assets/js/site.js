@@ -69,11 +69,13 @@ if (voltar && abertura && 'IntersectionObserver' in window) {
 }
 
 // Total de visitas do GoatCounter no rodapé. Se a consulta falhar, o rodapé fica como está.
-// O GoatCounter guarda o total em cache por até 4 horas.
+// O site tem uma página só, então o contador da página raiz (%2F.json) equivale ao total.
+// O TOTAL.json ficou mais de 6 h preso no cache do CDN com o 0 de antes da primeira visita.
+// As duas contagens passam pelo mesmo cache, então o número pode atrasar algumas horas.
 const visitas = document.querySelector('[data-visitas]');
 
 if (visitas && window.fetch) {
-    fetch('https://danielsouza.goatcounter.com/counter/TOTAL.json')
+    fetch('https://danielsouza.goatcounter.com/counter/%2F.json')
         .then((resposta) => (resposta.ok ? resposta.json() : Promise.reject(resposta.status)))
         .then(({ count }) => {
             const total = Number(String(count).replace(/\D/g, ''));
