@@ -68,23 +68,25 @@ if (voltar && abertura && 'IntersectionObserver' in window) {
     voltar.classList.add('is-visivel');
 }
 
-// Total de visitas do GoatCounter no rodapé. Se a consulta falhar, o rodapé fica como está.
-// O site tem uma página só, então o contador da página raiz (%2F.json) equivale ao total.
-// O TOTAL.json ficou mais de 6 h preso no cache do CDN com o 0 de antes da primeira visita.
-// As duas contagens passam pelo mesmo cache, então o número pode atrasar algumas horas.
+// Total de visitas do GoatCounter no rodapé. Se as consultas falharem, o rodapé fica como está.
+// O CDN do GoatCounter guarda cada contador por horas, e cada endereço vence numa hora diferente:
+// já vimos o TOTAL.json preso em 0 enquanto a página raiz tinha 1, e o contrário (3 contra 1).
+// Como o site tem uma página só, os dois medem a mesma coisa; mostramos o maior, o mais recente.
 const visitas = document.querySelector('[data-visitas]');
 
 if (visitas && window.fetch) {
-    fetch('https://danielsouza.goatcounter.com/counter/%2F.json')
-        .then((resposta) => (resposta.ok ? resposta.json() : Promise.reject(resposta.status)))
-        .then(({ count }) => {
-            const total = Number(String(count).replace(/\D/g, ''));
-            if (!total) return;
-            visitas.querySelector('[data-visitas-total]').textContent =
-                `${total.toLocaleString('pt-BR')} ${total === 1 ? 'visita' : 'visitas'}`;
-            visitas.hidden = false;
-        })
-        .catch(() => { });
+    const contador = (caminho) =>
+        fetch(`https://danielsouza.goatcounter.com/counter/${caminho}.json`)
+            .then((resposta) => (resposta.ok ? resposta.json() : Promise.reject(resposta.status)))
+            .then(({ count }) => Number(String(count).replace(/\D/g, '')) || 0);
+
+    Promise.allSettled([contador('TOTAL'), contador('%2F')]).then((resultados) => {
+        const total = Math.max(0, ...resultados.map((r) => (r.status === 'fulfilled' ? r.value : 0)));
+        if (!total) return;
+        visitas.querySelector('[data-visitas-total]').textContent =
+            `${total.toLocaleString('pt-BR')} ${total === 1 ? 'visita' : 'visitas'}`;
+        visitas.hidden = false;
+    });
 }
 
 // Entradas ao rolar: marca cada bloco com is-visto quando ele chega à tela.
