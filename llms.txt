@@ -1,0 +1,39 @@
+# Daniel Souza dos Santos
+
+> Daniel Souza é Analista de Dados Sênior em Marketing Analytics na Cogna Educação, em São Paulo (SP, Brasil). Há mais de sete anos trabalha com dados de CRM: leva o dado do pipeline em SQL e Google BigQuery até dashboards em Power BI que a diretoria usa para decidir o orçamento de marketing.
+
+Portfólio: https://danielsouza-data.github.io/
+Contato: comercial.danielsantos@gmail.com, LinkedIn https://www.linkedin.com/in/danielsouza-data/ e GitHub https://github.com/danielsouza-data
+
+## Especialidades
+
+- CRM Analytics e Marketing Analytics: jornadas de clientes por e-mail, SMS e WhatsApp, funil de conversão e ROI por canal, período e persona.
+- SQL: SQL Server, T-SQL, BigQuery e MySQL. Stored procedures, jobs, CTEs, window functions e otimização de consultas.
+- Power BI: DAX, Power Query e modelagem de dados para dashboards de CRM e de diretoria.
+- Engenharia de dados: ETL e ELT, pipelines em camadas (raw, staging, analytics) e data warehouse no Google BigQuery.
+- CRM e CDP: segmentação de audiências, automação de campanhas e mensuração de ROI.
+- Python (Pandas, NumPy, Matplotlib) e desenvolvimento web (Next.js, React, Supabase, Vercel, GitHub Actions).
+
+## Projetos
+
+- [Insider Architect Analytics (2026)](https://danielsouza-data.github.io/#projetos): plataforma de analytics e ROI para a Central de Relacionamento da Cogna. Junta a API da Insider com o histórico de conversão, receita e captação no BigQuery, em camadas raw, staging e datamart (PostgreSQL), e entrega ROAS, CPA e ROI por canal. Acabou com o cruzamento manual dos dados de captação.
+- [Dashboard integrado de CRM multicanal (2025)](https://danielsouza-data.github.io/#projetos): dados de e-mail, SMS e WhatsApp em camadas no BigQuery e funil em Power BI por período, canal e persona. Reduziu em 30% o tempo de análise da equipe de marketing.
+
+## Trajetória
+
+- Analista de Dados Sênior, Marketing Analytics, Cogna Educação (set 2025 até hoje)
+- Consultor de Dados, Cogna Educação, via Jump Label Solutions (abr a set 2025)
+- Consultor de DBM (Database Marketing), Cogna Educação, via Jump Label Solutions (mai 2024 a abr 2025)
+- Analista de Planejamento e Database Marketing, RBrasil Soluções (out 2021 a fev 2024)
+- Assistente de Control Desk, Flex Contact Center (set 2017 a fev 2021)
+
+## Formação
+
+- Tecnólogo em Ciência de Dados, Anhanguera Educação (2025 a 2027, em andamento)
+- Tecnólogo em Análise e Desenvolvimento de Sistemas, Faculdade Impacta (2023 a 2026, em andamento)
+- Certificações: Business Intelligence e Big Data & Analytics (FIAP, 2025), Programação em T-SQL (Faculdade Impacta, 2025), SQL com Google BigQuery (Udemy, 2024), Introduction to Large Language Models e Introduction to Generative AI (Google Cloud Skills Boost, 2024)
+
+## Documentos
+
+- [Currículo em português (PDF)](https://danielsouza-data.github.io/docs/daniel-souza-curriculo-pt.pdf)
+- [Résumé in English (PDF)](https://danielsouza-data.github.io/docs/daniel-souza-resume-en.pdf)

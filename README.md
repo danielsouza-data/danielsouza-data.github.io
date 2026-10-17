@@ -12,6 +12,17 @@ Site estático em HTML, CSS e JavaScript puros, sem etapa de build. O GitHub Pag
 - `assets/img/`: avatar em pixel art.
 - `docs/`: currículos em português e em inglês para download.
 - `404.html`: página de endereço não encontrado.
+- `robots.txt` e `sitemap.xml`: liberam o site para buscadores e listam a página e os currículos.
+- `llms.txt`: resumo do portfólio em texto para assistentes de IA (ChatGPT, Claude, Perplexity, Gemini).
+- `cb8757302f35cd93ef7155ef0ecdf690.txt`: chave do IndexNow, que avisa o Bing e outros buscadores quando o site muda.
+
+## SEO
+
+Os dados estruturados (JSON-LD com `WebSite`, `ProfilePage` e `Person`) ficam no `<head>` do `index.html`. Ao mudar o conteúdo, atualize o `dateModified` do JSON-LD, o `<lastmod>` do `sitemap.xml` e, se for o caso, o `llms.txt`. Depois do push, avise o IndexNow:
+
+```
+curl "https://api.indexnow.org/indexnow?url=https://danielsouza-data.github.io/&key=cb8757302f35cd93ef7155ef0ecdf690"
+```
 
 ## Rodar localmente
 

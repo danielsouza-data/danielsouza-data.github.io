@@ -1,0 +1,5 @@
+# Todo o site pode ser lido por buscadores e por assistentes de IA.
+User-agent: *
+Allow: /
+
+Sitemap: https://danielsouza-data.github.io/sitemap.xml
