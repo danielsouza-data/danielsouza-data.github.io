@@ -72,15 +72,20 @@ if (voltar && abertura && 'IntersectionObserver' in window) {
 // O CDN do GoatCounter guarda cada contador por horas, e cada endereço vence numa hora diferente:
 // já vimos o TOTAL.json preso em 0 enquanto a página raiz tinha 1, e o contrário (3 contra 1).
 // Como o site tem uma página só, os dois medem a mesma coisa; mostramos o maior, o mais recente.
+// Algumas redes e o "DNS privado" do Android recusam o goatcounter.com. Para esses casos há uma
+// cópia em assets/data/visitas.json, atualizada a cada 6 horas pelo workflow visitas.yml.
 const visitas = document.querySelector('[data-visitas]');
 
 if (visitas && window.fetch) {
+    const numero = (valor) => Number(String(valor).replace(/\D/g, '')) || 0;
+    const ler = (endereco, opcoes) =>
+        fetch(endereco, opcoes)
+            .then((resposta) => (resposta.ok ? resposta.json() : Promise.reject(resposta.status)));
     const contador = (caminho) =>
-        fetch(`https://danielsouza.goatcounter.com/counter/${caminho}.json`)
-            .then((resposta) => (resposta.ok ? resposta.json() : Promise.reject(resposta.status)))
-            .then(({ count }) => Number(String(count).replace(/\D/g, '')) || 0);
+        ler(`https://danielsouza.goatcounter.com/counter/${caminho}.json`).then(({ count }) => numero(count));
+    const copia = () => ler('assets/data/visitas.json', { cache: 'no-cache' }).then(({ total }) => numero(total));
 
-    Promise.allSettled([contador('TOTAL'), contador('%2F')]).then((resultados) => {
+    Promise.allSettled([contador('TOTAL'), contador('%2F'), copia()]).then((resultados) => {
         const total = Math.max(0, ...resultados.map((r) => (r.status === 'fulfilled' ? r.value : 0)));
         if (!total) return;
         visitas.querySelector('[data-visitas-total]').textContent =

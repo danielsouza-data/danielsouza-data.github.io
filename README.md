@@ -14,6 +14,7 @@ Site estático em HTML, CSS e JavaScript puros, sem etapa de build. O GitHub Pag
 - `404.html`: página de endereço não encontrado.
 - `robots.txt` e `sitemap.xml`: liberam o site para buscadores e listam a página e os currículos.
 - `llms.txt`: resumo do portfólio em texto para assistentes de IA (ChatGPT, Claude, Perplexity, Gemini).
+- `assets/data/visitas.json`: cópia do total de visitas do GoatCounter, atualizada a cada 6 horas pelo workflow `.github/workflows/visitas.yml`. O rodapé mostra o maior entre ela e o contador ao vivo, porque algumas redes e o "DNS privado" do Android recusam a conexão com o `goatcounter.com`. O GitHub desativa workflows agendados depois de 60 dias sem commits; se o número parar, reative em Actions.
 - `cb8757302f35cd93ef7155ef0ecdf690.txt`: chave do IndexNow, que avisa o Bing e outros buscadores quando o site muda.
 
 ## SEO

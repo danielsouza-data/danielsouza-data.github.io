@@ -1,0 +1,46 @@
+# Copia o total de visitas do GoatCounter para assets/data/visitas.json.
+# Algumas redes e o "DNS privado" do Android recusam a conexão com o goatcounter.com;
+# o rodapé então lê esta cópia, que vem do próprio site e não é bloqueada.
+name: Copiar contador de visitas
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: visitas
+  cancel-in-progress: false
+
+jobs:
+  copiar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ler os contadores
+        run: |
+          ler() {
+            curl -fsS "https://danielsouza.goatcounter.com/counter/$1.json" | jq -r '.count' | tr -cd '0-9'
+          }
+          total=$(ler TOTAL || true)
+          raiz=$(ler %2F || true)
+          anterior=$(jq -r '.total // 0' assets/data/visitas.json 2>/dev/null || echo 0)
+          # O CDN do GoatCounter pode devolver um valor antigo; nunca diminui o número.
+          maior=$(printf '%s\n' "${total:-0}" "${raiz:-0}" "${anterior:-0}" | sort -n | tail -1)
+          echo "TOTAL=$total raiz=$raiz anterior=$anterior -> $maior"
+          if [ "$maior" -gt "$anterior" ]; then
+            printf '{"total": %s}\n' "$maior" > assets/data/visitas.json
+          fi
+
+      - name: Gravar se mudou
+        run: |
+          git diff --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/visitas.json
+          git commit -m "Atualiza a cópia do contador de visitas"
+          git push
