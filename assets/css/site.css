@@ -17,6 +17,7 @@
     --serie-operacao: #5C6B8E;
     --contato-fundo: #16213F;
     --pulso: var(--amarelo);
+    --nome: var(--amarelo);
 
     --fonte-titulo: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
     --fonte-texto: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
@@ -41,6 +42,7 @@
     --serie-operacao: #9DAAC2;
     --contato-fundo: #14213D;
     --pulso: var(--azul);
+    --nome: var(--azul);
 }
 
 /* ---------- Base ---------- */
@@ -229,6 +231,18 @@ img {
 
 .abertura__texto {
     max-width: 54rem;
+}
+
+/* Nome e cargo no topo do h1, para o título principal dizer quem é a pessoa */
+.abertura__nome {
+    display: block;
+    margin-bottom: 1rem;
+    font-family: var(--fonte-texto);
+    font-size: clamp(0.95rem, 0.4vw + 0.85rem, 1.15rem);
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    color: var(--nome);
 }
 
 .abertura__resumo {
