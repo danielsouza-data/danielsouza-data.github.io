@@ -19,7 +19,7 @@ Site estático em HTML, CSS e JavaScript puros, sem etapa de build. O GitHub Pag
 
 ## SEO
 
-Os dados estruturados (JSON-LD com `WebSite`, `ProfilePage` e `Person`) ficam no `<head>` do `index.html`. Ao mudar o conteúdo, atualize o `dateModified` do JSON-LD, o `<lastmod>` do `sitemap.xml` e, se for o caso, o `llms.txt`. Depois do push, avise o IndexNow:
+Os dados estruturados (JSON-LD com `WebSite`, `ProfilePage` e `Person`) ficam no `<head>` do `index.html`. Ao mudar o conteúdo, atualize o `dateModified` do JSON-LD (data e hora com fuso, como `2026-10-19T10:00:00-03:00`; só a data o Google marca como inválida), o `<lastmod>` do `sitemap.xml` e, se for o caso, o `llms.txt`. Depois do push, avise o IndexNow:
 
 ```
 curl "https://api.indexnow.org/indexnow?url=https://danielsouza-data.github.io/&key=cb8757302f35cd93ef7155ef0ecdf690"
