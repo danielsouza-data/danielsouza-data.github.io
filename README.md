@@ -10,7 +10,7 @@ Site estático em HTML, CSS e JavaScript puros, sem etapa de build. O GitHub Pag
 - `assets/css/site.css`: estilos. O tema escuro é o padrão; o claro entra com `data-theme="light"` no `<html>`.
 - `assets/js/site.js`: detalhe dos cargos na trajetória, botão de tema e "Voltar ao topo".
 - `assets/img/`: avatar em pixel art.
-- `assets/fonts/`: Bricolage Grotesque e IBM Plex Sans (subconjuntos latin e latin-ext, licença OFL), servidas pelo próprio site para não travar a primeira pintura. Os arquivos `latin` têm `preload` no `<head>`.
+- `assets/fonts/`: Bricolage Grotesque e IBM Plex Sans (subconjuntos latin e latin-ext, licença OFL), servidas pelo próprio site para não travar a primeira pintura. Os arquivos `latin` têm `preload` no `<head>`. A Bricolage foi reduzida com o fontTools: pesos 600 a 700, tamanho óptico 16 a 64, só os recursos `kern`, `mark`, `mkmk`, `ccmp`, `locl`, `liga` e `calt`, e, no `latin`, só ASCII, Latin-1 e a pontuação comum (`–`, `—`, aspas curvas, `•`, `…`, `€`, `™`, setas e `−`). Se um título passar a usar outro peso, outro caractere ou um tamanho fora disso, gere de novo a partir da fonte original do Google Fonts com `fontTools.varLib.instancer` e `fontTools.subset`, e ajuste o `font-weight` e o `unicode-range` no `site.css`.
 - `docs/`: currículos em português e em inglês para download.
 - `404.html`: página de endereço não encontrado.
 - `robots.txt` e `sitemap.xml`: liberam o site para buscadores e listam a página e os currículos.
