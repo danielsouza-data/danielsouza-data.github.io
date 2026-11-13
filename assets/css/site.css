@@ -587,6 +587,16 @@ button.cargo__linha:hover .cargo__barra {
     color: var(--tinta-suave);
 }
 
+.caso__capa {
+    display: block;
+    width: 100%;
+    max-width: 44rem;
+    height: auto;
+    margin-top: 1.5rem;
+    border: 1px solid var(--grade);
+    border-radius: 4px;
+}
+
 /* Caminho do dado: fonte, camadas e entrega */
 .fluxo {
     display: grid;
