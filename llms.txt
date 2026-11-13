@@ -12,7 +12,10 @@ Contato: comercial.danielsantos@gmail.com, LinkedIn https://www.linkedin.com/in/
 - Power BI: DAX, Power Query e modelagem de dados para dashboards de CRM e de diretoria.
 - Engenharia de dados: ETL e ELT, pipelines em camadas (raw, staging, analytics) e data warehouse no Google BigQuery.
 - CRM e CDP: segmentação de audiências, automação de campanhas e mensuração de ROI.
-- Python (Pandas, NumPy, Matplotlib) e desenvolvimento web (Next.js, React, Supabase, Vercel, GitHub Actions).
+- Python (Pandas, NumPy, Matplotlib) e desenvolvimento web: TypeScript, Next.js, React, Vite, Tailwind CSS, Node.js, Fastify, Drizzle ORM, Supabase, PostgreSQL, Vercel e GitHub Actions.
+- Testes e qualidade: Vitest, Playwright, Testing Library, axe-core, ESLint, Prettier e Gitleaks.
+- IA e agentes: times de agentes com Claude Code, Codex CLI, Google Antigravity e OpenCode, orquestrados no Maestri, com graphify; voz e transcrição locais com Kyutai PocketTTS e Faster-Whisper.
+- Vídeo e design em código: HyperFrames, GSAP, Three.js, FFmpeg, Playwright e Pillow.
 
 ## Projetos
 
