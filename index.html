@@ -56,7 +56,7 @@
                 "name": "Daniel Souza | Analista de Dados Sênior, CRM e Marketing Analytics",
                 "inLanguage": "pt-BR",
                 "isPartOf": { "@id": "https://danielsouza-data.github.io/#site" },
-                "dateModified": "2026-11-13T12:57:33-03:00",
+                "dateModified": "2026-11-13T14:16:13-03:00",
                 "mainEntity": { "@id": "https://danielsouza-data.github.io/#daniel" }
             },
             {
@@ -296,14 +296,15 @@
                         <ul>
                             <li>Monorepo em TypeScript: API em Fastify, front em React com Vite e TanStack Query, sobre um Design System próprio.</li>
                             <li>Isolamento multi-tenant com Row Level Security forçada no PostgreSQL e papéis de banco separados para aplicação, migração e dono.</li>
-                            <li>Caixa de e-mail integrada por webhook, com credenciais cifradas em AES-256-GCM e envio idempotente (em desenvolvimento).</li>
-                            <li>Mais de 760 testes automatizados na API e cerca de 400 na plataforma, com Vitest, Playwright, axe e CI no GitHub Actions.</li>
+                            <li>Caixa de e-mail integrada à ficha de cada cliente: recebimento por webhook autenticado, busca, modelos e resposta contextual com envio sem duplicidade, credenciais cifradas em AES-256-GCM e nenhum conteúdo de e-mail gravado no banco.</li>
+                            <li>Mais de 760 testes automatizados na API e cerca de 400 na plataforma, com Vitest, Playwright, axe e CI no GitHub Actions, que publica a API e a plataforma a cada merge aprovado.</li>
                         </ul>
                     </div>
                     <div>
                         <h4>Resultado</h4>
                         <ul>
-                            <li>Primeira versão e portal do cliente em produção.</li>
+                            <li>Primeira versão, portal do cliente e caixa de e-mail integrada em produção.</li>
+                            <li>CI reestruturado: cada pull request passou de cerca de 50 para 3 minutos.</li>
                             <li>Desenvolvimento por agentes de IA em papéis de backend, frontend, revisão de segurança e produto, com revisão cruzada obrigatória entre modelos diferentes.</li>
                         </ul>
                     </div>
