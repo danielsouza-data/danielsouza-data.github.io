@@ -16,8 +16,16 @@ Contato: comercial.danielsantos@gmail.com, LinkedIn https://www.linkedin.com/in/
 
 ## Projetos
 
-- [Insider Architect Analytics (2026)](https://danielsouza-data.github.io/#projetos): plataforma de analytics e ROI para a Central de Relacionamento da Cogna. Junta a API da Insider com o histórico de conversão, receita e captação no BigQuery, em camadas raw, staging e datamart (PostgreSQL), e entrega ROAS, CPA e ROI por canal. Acabou com o cruzamento manual dos dados de captação.
+- [Painel executivo de CRM e atribuição (2026)](https://danielsouza-data.github.io/#projetos): painel em produção para a liderança da Central de Relacionamento da Cogna. Junta a API de mensageria (e-mail, SMS, WhatsApp e push) com o funil de captação no BigQuery, em camadas raw, staging e analytics (PostgreSQL), e atribui conversões ao CRM por último clique em 7 dias e toques assistidos. Next.js, Supabase, BigQuery, cerca de 1.350 testes unitários e 107 E2E. Acabou com o cruzamento manual dos dados de captação.
 - [Dashboard integrado de CRM multicanal (2025)](https://danielsouza-data.github.io/#projetos): dados de e-mail, SMS e WhatsApp em camadas no BigQuery e funil em Power BI por período, canal e persona. Reduziu em 30% o tempo de análise da equipe de marketing.
+
+## Projetos próprios
+
+- [Ponto Alto (2026)](https://danielsouza-data.github.io/#projetos-proprios): site institucional e plataforma interna de gestão da agência de marketing digital de Daniel (https://agenciapontoalto.com.br). Monorepo TypeScript com Fastify, Drizzle, PostgreSQL multi-tenant com Row Level Security forçada, React, Next.js e portal do cliente com aprovação de conteúdo. Mais de 1.100 testes automatizados.
+- [Explicando com Rabisco (2026)](https://danielsouza-data.github.io/#projetos-proprios): canal de vídeos curtos sobre curiosidades (https://www.youtube.com/@explicandocomrabisco), produzido por um pipeline de custo zero sem GPU: roteiro com fonte por frase, checagem por agente separado, narração local, animação programática com HyperFrames e envio agendado pela API.
+- [Conteúdo para o LinkedIn em código (2026)](https://danielsouza-data.github.io/#projetos-proprios): perfil e posts com artes desenhadas em HTML e renderizadas em PNG com Playwright, produzidos por agentes de IA com aprovação humana.
+
+Os projetos próprios são desenvolvidos com times de agentes de IA em papéis separados, coordenados por um agente maestro, com revisão cruzada e aprovação humana.
 
 ## Trajetória
 

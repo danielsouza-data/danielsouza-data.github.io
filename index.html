@@ -56,7 +56,7 @@
                 "name": "Daniel Souza | Analista de Dados Sênior, CRM e Marketing Analytics",
                 "inLanguage": "pt-BR",
                 "isPartOf": { "@id": "https://danielsouza-data.github.io/#site" },
-                "dateModified": "2026-10-19T12:09:34-03:00",
+                "dateModified": "2026-11-13T11:59:38-03:00",
                 "mainEntity": { "@id": "https://danielsouza-data.github.io/#daniel" }
             },
             {
@@ -171,41 +171,44 @@
 
             <article class="caso">
                 <header class="caso__cabeca">
-                    <h3>Insider Architect Analytics</h3>
-                    <p>Plataforma de analytics e ROI para a Central de Relacionamento, 2026</p>
+                    <h3>Painel executivo de CRM e atribuição</h3>
+                    <p>Mensageria, funil de captação e atribuição de conversões para a Central de Relacionamento, 2026, em produção</p>
                 </header>
 
                 <ol class="fluxo" aria-label="Caminho do dado">
-                    <li data-tipo="fonte"><strong>API da Insider e BigQuery</strong><span>Engajamento, conversão, receita e captação</span></li>
-                    <li data-tipo="camada"><strong>Raw</strong><span>Ingestão diária e backfill em blocos de 10 dias</span></li>
+                    <li data-tipo="fonte"><strong>API de mensageria e BigQuery</strong><span>E-mail, SMS, WhatsApp, push e funil de captação</span></li>
+                    <li data-tipo="camada"><strong>Raw</strong><span>Ingestão diária idempotente, com auditoria de falhas</span></li>
                     <li data-tipo="camada"><strong>Staging</strong><span>Taxonomia e padronização das métricas</span></li>
-                    <li data-tipo="camada"><strong>Datamart</strong><span>Materialized views no PostgreSQL</span></li>
-                    <li data-tipo="entrega"><strong>Dashboard executivo</strong><span>ROAS, CPA e ROI por canal e ciclo de captação</span></li>
+                    <li data-tipo="camada"><strong>Analytics</strong><span>Agregações SQL e atribuição no PostgreSQL</span></li>
+                    <li data-tipo="entrega"><strong>Painel executivo</strong><span>Funil por etapa, réguas e conversões atribuídas ao CRM</span></li>
                 </ol>
 
                 <div class="caso__corpo">
                     <div>
                         <h4>Desafio</h4>
                         <p>
-                            Juntar as métricas de campanhas da API da Insider com o histórico de conversão,
-                            receita e captação, e calcular o retorno de WhatsApp, e-mail, SMS e push sem
-                            cruzar dados à mão.
+                            Juntar as métricas de campanhas da plataforma de mensageria com o funil de captação
+                            e mostrar à liderança quanto de cada conversão vem do CRM, em WhatsApp, e-mail,
+                            SMS e push, sem cruzar dados à mão.
                         </p>
                     </div>
                     <div>
                         <h4>O que construí</h4>
                         <ul>
-                            <li>Dashboard full-stack em Next.js, React, Recharts, Supabase e BigQuery.</li>
-                            <li>Pipelines de ingestão com Vercel Cron, token bucket para o limite da API e GitHub Actions encadeadas, contornando o timeout de 6 horas.</li>
-                            <li>Cache com revalidação por tags, agregações e paginação no servidor para grandes volumes.</li>
-                            <li>Row Level Security, acesso restrito a domínios corporativos, testes com Vitest e CI/CD.</li>
+                            <li>Painel full-stack em Next.js, React, Recharts, Supabase e BigQuery, responsivo também no celular.</li>
+                            <li>Atribuição de conversões ao CRM cruzando duas fontes: último clique em 7 dias e toques assistidos, reprocessada em janela móvel.</li>
+                            <li>Matriz do funil por etapa (volume, base ativável, cobertura do CRM, média de abordagens, conversões) e métricas por comunicação de cada régua.</li>
+                            <li>Virada automática do ciclo de captação sem duplicar registros, rotina diária D-1 com Vercel Cron e GitHub Actions, e limite de requisições por conta na API.</li>
+                            <li>Cache de 24 horas com aquecimento automático, que nunca guarda leitura parcial.</li>
+                            <li>Row Level Security, acesso por login corporativo e cerca de 1.350 testes unitários e 107 testes E2E rodando antes de cada entrega.</li>
+                            <li>Desenvolvido com um time de agentes de IA (backend, frontend, revisão de código e entrega) coordenado por um agente maestro, com revisão obrigatória.</li>
                         </ul>
                     </div>
                     <div>
                         <h4>Resultado</h4>
                         <ul>
                             <li>Fim do cruzamento manual dos dados de captação.</li>
-                            <li>Executivos passaram a ver quais canais e jornadas geram mais matrículas, o que apoia a alocação do orçamento de marketing.</li>
+                            <li>A liderança vê quais canais e réguas geram conversões, o que apoia a alocação do orçamento de marketing.</li>
                             <li>Métricas consistentes, garantidas pelo módulo de taxonomia.</li>
                         </ul>
                     </div>
@@ -250,6 +253,134 @@
                             <li>Fim dos processos manuais e das múltiplas planilhas.</li>
                             <li>Uma única fonte de dados para decidir o investimento em campanhas.</li>
                             <li>Dashboards adotados nas reuniões executivas e no planejamento de orçamento.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="secao" id="projetos-proprios" aria-labelledby="projetos-proprios-titulo">
+            <div class="secao__cabeca">
+                <h2 id="projetos-proprios-titulo">Projetos próprios</h2>
+                <p>Fora do trabalho, construo produtos com times de agentes de IA, cada um num papel, com revisão cruzada e aprovação humana.</p>
+            </div>
+
+            <article class="caso">
+                <header class="caso__cabeca">
+                    <h3>Ponto Alto, plataforma de gestão da agência</h3>
+                    <p>Site institucional e plataforma interna da minha agência de marketing digital, 2026, em produção. <a href="https://agenciapontoalto.com.br">agenciapontoalto.com.br</a></p>
+                </header>
+
+                <ol class="fluxo" aria-label="Como a plataforma se organiza">
+                    <li data-tipo="fonte"><strong>Site institucional</strong><span>Next.js estático, CSP estrita e SEO regional</span></li>
+                    <li data-tipo="camada"><strong>API</strong><span>Fastify e Drizzle, com autenticação em dois fatores</span></li>
+                    <li data-tipo="camada"><strong>PostgreSQL</strong><span>Multi-tenant com Row Level Security forçada</span></li>
+                    <li data-tipo="camada"><strong>Plataforma</strong><span>Clientes, projetos, conteúdos, tarefas e arquivos</span></li>
+                    <li data-tipo="entrega"><strong>Portal do cliente</strong><span>Aprovação de conteúdo pelo próprio cliente</span></li>
+                </ol>
+
+                <div class="caso__corpo">
+                    <div>
+                        <h4>Desafio</h4>
+                        <p>
+                            Tirar a operação da agência de planilhas e mensagens soltas: clientes, projetos,
+                            conteúdos, aprovações e arquivos num só lugar, com os dados de cada cliente isolados.
+                        </p>
+                    </div>
+                    <div>
+                        <h4>O que construí</h4>
+                        <ul>
+                            <li>Monorepo em TypeScript: API em Fastify, front em React com Vite e TanStack Query, sobre um Design System próprio.</li>
+                            <li>Isolamento multi-tenant com Row Level Security forçada no PostgreSQL e papéis de banco separados para aplicação, migração e dono.</li>
+                            <li>Caixa de e-mail integrada por webhook, com credenciais cifradas em AES-256-GCM e envio idempotente (em desenvolvimento).</li>
+                            <li>Mais de 760 testes automatizados na API e cerca de 400 na plataforma, com Vitest, Playwright, axe e CI no GitHub Actions.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Resultado</h4>
+                        <ul>
+                            <li>Primeira versão e portal do cliente em produção.</li>
+                            <li>Desenvolvimento por agentes de IA em papéis de backend, frontend, revisão de segurança e produto, com revisão cruzada obrigatória entre modelos diferentes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="caso">
+                <header class="caso__cabeca">
+                    <h3>Explicando com Rabisco</h3>
+                    <p>Canal de vídeos curtos sobre curiosidades do Brasil e do mundo, desde outubro de 2026. <a href="https://www.youtube.com/@explicandocomrabisco">YouTube</a>, <a href="https://www.tiktok.com/@explicandocomrabisco">TikTok</a>, <a href="https://www.instagram.com/explicandocomrabisco">Instagram</a> e <a href="https://www.facebook.com/explicandocomrabisco">Facebook</a></p>
+                </header>
+
+                <ol class="fluxo" aria-label="Caminho de um vídeo">
+                    <li data-tipo="fonte"><strong>Pauta e roteiro</strong><span>Fonte oficial para cada frase</span></li>
+                    <li data-tipo="camada"><strong>Checagem</strong><span>Um agente separado revisa os fatos</span></li>
+                    <li data-tipo="camada"><strong>Narração</strong><span>TTS local e transcrição com Faster-Whisper</span></li>
+                    <li data-tipo="camada"><strong>Animação e render</strong><span>HTML, GSAP e Three.js viram MP4</span></li>
+                    <li data-tipo="entrega"><strong>Publicação</strong><span>Envio agendado pela API, nas quatro redes</span></li>
+                </ol>
+
+                <div class="caso__corpo">
+                    <div>
+                        <h4>Desafio</h4>
+                        <p>
+                            Produzir vídeos explicativos com qualidade e frequência constantes, sem equipe,
+                            sem GPU e sem custo de ferramentas.
+                        </p>
+                    </div>
+                    <div>
+                        <h4>O que construí</h4>
+                        <ul>
+                            <li>Pipeline de vídeo de custo zero que roda num notebook sem GPU, da pauta ao envio agendado ao YouTube.</li>
+                            <li>Animação programática com HyperFrames, mascote articulado com expressões e cenários desenhados por tema.</li>
+                            <li>Trilha e efeitos sonoros compostos por código, livres de Content ID.</li>
+                            <li>Painel diário de métricas das quatro redes, coletado pelas APIs do YouTube, da Meta e do TikTok.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Resultado</h4>
+                        <ul>
+                            <li>16 vídeos publicados em menos de um mês, num ritmo de três por semana.</li>
+                            <li>Produção feita por um time de agentes de IA coordenado por um maestro, com revisão e aprovação humanas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="caso">
+                <header class="caso__cabeca">
+                    <h3>Conteúdo para o LinkedIn em código</h3>
+                    <p>Perfil, posts e artes produzidos com agentes de IA, 2026. <a href="https://www.linkedin.com/in/danielsouza-data/">Meu LinkedIn</a></p>
+                </header>
+
+                <ol class="fluxo" aria-label="Caminho de um post">
+                    <li data-tipo="fonte"><strong>Ideia</strong><span>Uma ideia por peça</span></li>
+                    <li data-tipo="camada"><strong>Texto</strong><span>Escrito por um agente de conteúdo</span></li>
+                    <li data-tipo="camada"><strong>Layout em HTML</strong><span>Arte desenhada em código</span></li>
+                    <li data-tipo="camada"><strong>Render</strong><span>Playwright transforma o HTML em PNG</span></li>
+                    <li data-tipo="entrega"><strong>Post agendado</strong><span>Só sai depois da minha aprovação</span></li>
+                </ol>
+
+                <div class="caso__corpo">
+                    <div>
+                        <h4>Desafio</h4>
+                        <p>
+                            Manter perfil e calendário de posts consistentes, com artes próprias, sem tirar
+                            tempo do trabalho principal.
+                        </p>
+                    </div>
+                    <div>
+                        <h4>O que construí</h4>
+                        <ul>
+                            <li>Pipeline de artes em código: layout em HTML e CSS renderizado em PNG 1200x627 com Playwright.</li>
+                            <li>Agentes de IA com papéis e regras próprios, e aprovação humana antes de qualquer publicação.</li>
+                            <li>Knowledge graph do projeto com 672 nós, consultável por pergunta.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Resultado</h4>
+                        <ul>
+                            <li>Perfil reescrito em português e inglês e 16 posts com arte própria.</li>
                         </ul>
                     </div>
                 </div>
