@@ -1,12 +1,13 @@
 # Daniel Souza dos Santos
 
-> Daniel Souza é Analista de Dados Sênior em Marketing Analytics na Cogna Educação, em São Paulo (SP, Brasil). Há mais de sete anos trabalha com dados de CRM: leva o dado do pipeline em SQL e Google BigQuery até dashboards em Power BI que a diretoria usa para decidir o orçamento de marketing.
+> Daniel Souza trabalha com IA aplicada, em São Paulo (SP, Brasil): monta processos com agentes de IA em papéis definidos, com revisão cruzada entre modelos e aprovação humana. A base são mais de sete anos em dados, CRM e Analytics Engineering; hoje é Analista de Dados Sênior em Marketing Analytics na Cogna Educação, onde leva o dado do pipeline em SQL e Google BigQuery até dashboards em Power BI.
 
 Portfólio: https://danielsouza-data.github.io/
 Contato: comercial.danielsantos@gmail.com, LinkedIn https://www.linkedin.com/in/danielsouza-data/ e GitHub https://github.com/danielsouza-data
 
 ## Especialidades
 
+- IA aplicada e agentes: processos com times de agentes (Claude Code, Codex CLI, Google Antigravity e OpenCode) em papéis definidos, orquestrados no Maestri, com engenharia de contexto, revisão cruzada entre modelos, aprovação humana, servidores MCP e knowledge graph com graphify; voz e transcrição locais com Kyutai PocketTTS e Faster-Whisper.
 - CRM Analytics e Marketing Analytics: jornadas de clientes por e-mail, SMS e WhatsApp, funil de conversão e ROI por canal, período e persona.
 - SQL: SQL Server, T-SQL, BigQuery e MySQL. Stored procedures, jobs, CTEs, window functions e otimização de consultas.
 - Power BI: DAX, Power Query e modelagem de dados para dashboards de CRM e de diretoria.
@@ -14,21 +15,20 @@ Contato: comercial.danielsantos@gmail.com, LinkedIn https://www.linkedin.com/in/
 - CRM e CDP: segmentação de audiências, automação de campanhas e mensuração de ROI.
 - Python (Pandas, NumPy, Matplotlib) e desenvolvimento web: TypeScript, Next.js, React, Vite, Tailwind CSS, Node.js, Fastify, Drizzle ORM, Supabase, PostgreSQL, Vercel e GitHub Actions.
 - Testes e qualidade: Vitest, Playwright, Testing Library, axe-core, ESLint, Prettier e Gitleaks.
-- IA e agentes: times de agentes com Claude Code, Codex CLI, Google Antigravity e OpenCode, orquestrados no Maestri, com graphify; voz e transcrição locais com Kyutai PocketTTS e Faster-Whisper.
 - Vídeo e design em código: HyperFrames, GSAP, Three.js, FFmpeg, Playwright e Pillow.
 
-## Projetos
-
-- [Painel executivo de CRM e atribuição (2026)](https://danielsouza-data.github.io/#projetos): painel em produção para a liderança da Central de Relacionamento da Cogna. Junta a API de mensageria (e-mail, SMS, WhatsApp e push) com o funil de captação no BigQuery, em camadas raw, staging e analytics (PostgreSQL), e atribui conversões ao CRM por último clique em 7 dias e toques assistidos. Next.js, Supabase, BigQuery, cerca de 1.350 testes unitários e 107 E2E. Acabou com o cruzamento manual dos dados de captação.
-- [Dashboard integrado de CRM multicanal (2025)](https://danielsouza-data.github.io/#projetos): dados de e-mail, SMS e WhatsApp em camadas no BigQuery e funil em Power BI por período, canal e persona. Reduziu em 30% o tempo de análise da equipe de marketing.
-
-## Projetos próprios
+## Processos com IA que construí (projetos próprios)
 
 - [Ponto Alto (2026)](https://danielsouza-data.github.io/#projetos-proprios): site institucional e plataforma interna de gestão da agência de marketing digital de Daniel (https://agenciapontoalto.com.br). Monorepo TypeScript com Fastify, Drizzle, PostgreSQL multi-tenant com Row Level Security forçada, React, Next.js, portal do cliente com aprovação de conteúdo e caixa de e-mail integrada à ficha de cada cliente. Mais de 1.100 testes automatizados e CI de cerca de 3 minutos por pull request, com deploy automático.
 - [Explicando com Rabisco (2026)](https://danielsouza-data.github.io/#projetos-proprios): canal de vídeos curtos sobre curiosidades (https://www.youtube.com/@explicandocomrabisco), produzido por um pipeline de custo zero sem GPU: roteiro com fonte por frase, checagem por agente separado, narração local, animação programática com HyperFrames e envio agendado pela API.
 - [Conteúdo para o LinkedIn em código (2026)](https://danielsouza-data.github.io/#projetos-proprios): perfil e posts com artes desenhadas em HTML e renderizadas em PNG com Playwright, produzidos por agentes de IA com aprovação humana.
 
 Os projetos próprios são desenvolvidos com times de agentes de IA em papéis separados, coordenados por um agente maestro, com revisão cruzada e aprovação humana.
+
+## Projetos na Cogna Educação
+
+- [Painel executivo de CRM e atribuição (2026)](https://danielsouza-data.github.io/#projetos): painel em produção para a liderança da Central de Relacionamento da Cogna. Junta a API de mensageria (e-mail, SMS, WhatsApp e push) com o funil de captação no BigQuery, em camadas raw, staging e analytics (PostgreSQL), e atribui conversões ao CRM por último clique em 7 dias e toques assistidos. Next.js, Supabase, BigQuery, cerca de 1.350 testes unitários e 107 E2E. Acabou com o cruzamento manual dos dados de captação.
+- [Dashboard integrado de CRM multicanal (2025)](https://danielsouza-data.github.io/#projetos): dados de e-mail, SMS e WhatsApp em camadas no BigQuery e funil em Power BI por período, canal e persona. Reduziu o tempo de análise da equipe de marketing.
 
 ## Trajetória
 
